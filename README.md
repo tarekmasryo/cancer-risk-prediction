@@ -79,3 +79,54 @@ Confusion matrices and permutation importance plots are included for interpretab
 🔗 [Kaggle Profile](https://www.kaggle.com/tarekmasryo) • [GitHub Projects](https://github.com/tarekmasryo) • [LinkedIn](https://www.linkedin.com/in/tarekmasryo)
 
 ---
+## 📁 Repo layout
+
+```text
+.
+├── cancer-risk-factors-prediction.ipynb
+├── data/
+│   └── raw/               # place cancer-risk-factors.csv here (local runs)
+├── artifacts/             # saved models / encoders / summary tables
+├── repo_utils/
+│   └── pathing.py         # local + Kaggle path helpers
+├── CASE_STUDY.md
+├── requirements.txt
+└── .gitignore
+```
+
+---
+
+## ⚡ Quick Start
+
+```bash
+python -m venv .venv
+# Windows: .venv\Scripts\activate
+# macOS/Linux: source .venv/bin/activate
+
+pip install -r requirements.txt
+```
+
+- Put `cancer-risk-factors.csv` under `data/raw/` for local runs.
+- On Kaggle, the notebook can fall back to `/kaggle/input/` automatically.
+
+---
+
+## 📦 Data loading (local + Kaggle)
+
+This repo uses a small helper: `repo_utils/pathing.py`.
+
+- **Local (recommended):** `data/raw/cancer-risk-factors.csv`
+- **Kaggle fallback:** `/kaggle/input/cancer-risk-factors-dataset/cancer-risk-factors.csv`
+- **Optional override:** set `DATA_PATH` to a full file path.
+
+---
+
+## 📈 Outputs & Artifacts
+Saved to `artifacts/` (local) or `/kaggle/working/artifacts/` (Kaggle):
+- trained pipelines + label encoders (`*.joblib`)
+- any summary tables/figures you export from the notebook
+
+---
+
+## 🧾 Case Study
+See **CASE_STUDY.md** for the project story, key decisions, and takeaways.
