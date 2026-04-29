@@ -1,23 +1,15 @@
-__pycache__/
-.ipynb_checkpoints/
-*.pyc
-*.pyo
-*.pyd
-.Python
-env/
-venv/
-ENV/
-# ===== Level B (No Overkill) =====
-
-# Python / venv
-.venv/
-env/
-venv/
-ENV/
+# Python
 __pycache__/
 *.py[cod]
 *.pyo
 *.pyd
+.Python
+
+# Virtual environments
+.venv/
+env/
+venv/
+ENV/
 
 # Jupyter
 .ipynb_checkpoints/
@@ -28,7 +20,7 @@ Thumbs.db
 .vscode/
 .idea/
 
-# Data & artifacts (keep folders via .gitkeep)
+# Local data and generated artifacts
 data/raw/*
 !data/raw/.gitkeep
 
